@@ -1,0 +1,36 @@
+table#cart, table#history {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#cart quantity-bar {
+    display: flex;
+}
+
+table#cart quantity-stepper {
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+
+table#cart quantity-stepper.disabled {
+    cursor: default;
+}
+
+table#cart quantity-stepper svg {
+    width: 1rem;
+    height: 1rem;
+    stroke: #d4d4d4;
+    fill: #d4d4d4;
+    cursor: pointer;
+}
+
+table#cart quantity-stepper.disabled svg {
+    stroke: #777;
+    fill: #777;
+    cursor: default;
+}
+
+table#history input {
+    width: 4rem;
+}

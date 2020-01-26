@@ -1,0 +1,35 @@
+@model DeliveryApp.IdentityServer.Controllers.LoginPostbackModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div>
+    <strong>This a mock login implementation.</strong>
+    Choose any username. Display name is optional
+</div>
+
+<form
+    asp-controller="Account"
+    asp-action="LoginPostBack"
+    asp-route-returnUrl="@ViewBag.ReturnUrl"
+    method="post">
+
+        <div class="row">
+            <input asp-for="Username" tabindex="1" placeholder="Username" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required autofocus>
+        </div>
+
+        <div class="row">
+            <input id="dispatch" asp-for="Dispatch" tabindex="2"/>
+            <label for="dispatch">Login as dispatch</label>
+        </div>
+
+        <div class="row">
+            <input asp-for="DisplayName" tabindex="3" type="text" placeholder="Display name"/>
+        </div>
+
+        <div style="text-align: center; margin-top: 1.5rem">
+            <input style="padding: 1rem 2.5rem" type="submit" value="Log in" />
+        </div>
+</form>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - DeliveryApp/IdentityServer</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            background: #1e1e1e;
+            font-family: Lato;
+            color: #d4d4d4;
+        }
+
+        .container {
+            width: 100wv;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            flex-direction: column;
+            flex: 1 1 auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .splash {
+            display: block;
+            background-color: #2d2d2d;
+            box-shadow: 0.25rem 0.25rem 2.5rem 0 #9ea1a3;
+            padding: 3rem;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+        }
+
+        input, button {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            font-family: Lato;
+            border: solid 0.1rem #888;
+            padding: 0.4rem 0.6rem;
+            margin: 0 0.25rem;
+            transition: background-color 0.25s, border-color 0.25s;
+        }
+
+        button, input[type="submit"] {
+            cursor: pointer;
+        }
+
+        input:hover, button:hover {
+            background: #333;
+            border-color: #999;
+        }
+
+        input:active, input:focus, button:active, button:focus {
+            background: #444;
+            border-color: #aaa;
+        }
+
+        :focus {
+            outline: none;
+            background: #555;
+            box-shadow: 0 0 0.5rem #9ecaed;
+        }
+
+        form {
+            font-size: 125%;
+            margin-top: 1.5rem;
+            line-height: 2.0;
+        }
+
+        form input {
+            font-size: 100%;
+        }
+
+        form .row {
+            margin-top: 0.5rem;
+        }
+
+        a {
+            color: #d4d4d4;
+            transition: color 0.25s;
+        }
+
+        a:hover, a:active {
+            color: #e4e4e4;
+        }
+
+        a:visited {
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="splash">
+            <header>
+                <h1>@ViewBag.Title</h1>
+            </header>
+            @RenderBody()
+        </div>
+    </div>
+
+</body>
+</html>

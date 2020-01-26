@@ -1,0 +1,14 @@
+@model DeliveryApp.IdentityServer.Controllers.LogoutModel
+@{
+    ViewBag.Title = "Logout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <small>You are now logged out</small>
+
+    @if (Model.PostLogoutUri != null)
+    {
+        <div>
+            Return to <a href="@Model.PostLogoutUri">@(Model.ClientName)</a> application
+        </div>
+    }

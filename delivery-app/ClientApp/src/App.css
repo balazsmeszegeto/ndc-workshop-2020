@@ -1,0 +1,177 @@
+/* App layout & global style */
+
+body {
+  margin: 0;
+  background: #1e1e1e;
+  font-family: Lato;
+  color: #d4d4d4;
+}
+
+app-layout {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+header#header, footer#footer {
+    padding: 0.5rem;
+    background: #3c3c3c;
+    
+    z-index: 3;
+}
+
+header#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    flex: 0 0 3rem;
+}
+
+footer#footer {
+    height: 30vh;
+    flex: 0 0 30vh;
+    position: relative;
+}
+
+body-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: stretch;
+    align-content: stretch;
+    z-index: 0;
+}
+
+left-panel, right-panel {
+    flex: 1 1 50%;
+    position: relative;
+}
+
+left-panel {
+    background: #2d2d2d;
+    z-index: 1;
+}
+
+right-panel {
+    background: #1e1e1e;
+    box-shadow: 0.1rem 0 0.5rem 0 #9ea1a3;
+    z-index: 2;
+}
+
+div.scroll-area {
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+/* elements */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead tr:last-child th {
+    border-bottom: 0.05rem #cccccc solid;
+}
+
+tr {
+    line-height: 1.8;
+}
+
+td {
+    padding: 0.25rem;
+    border-bottom: 0.02rem #999 dotted;
+}
+
+input, button {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    font-family: Lato;
+    border: solid 0.1rem #888;
+    padding: 0.4rem 0.6rem;
+    margin: 0 0.25rem;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+button {
+    cursor: pointer;
+}
+
+input:hover, button:hover {
+    background: #333;
+    border-color: #999;
+}
+
+input:active, input:focus, button:active, button:focus {
+    background: #444;
+    border-color: #aaa;
+}
+
+:focus {
+    outline: none;
+    background: #555;
+    box-shadow: 0 0 0.5rem #9ecaed;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #777 transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #777;
+    border-radius: 0;
+    border-width: 0;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: transparent;
+}
+
+/* Misc */
+.currency::after {
+    content: " NOK";
+    font-variant: small-caps;
+    font-size: 67%;
+}
+
+td.center-align {
+    text-align: center;
+}
+
+td.right-align {
+    text-align: right;
+}
+
+.main {
+    font-weight: bold;
+    font-size: 125%
+}
+
+span.text-action {
+    color: #b4b4b4;
+    margin-left: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.25s;
+}
+
+span.text-action:hover {
+    color: #d4d4d4;
+}
+
+span.text-action:active {
+    color: #f4f4f4;
+}
+
+.space-above {
+    margin-top: 1rem;
+}

@@ -1,0 +1,20 @@
+div#reconnecting-container {
+    transition: opacity 0.5s linear 0s, visibility 0s linear 0.5s;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(33,33,33,.625);
+    z-index: 15;
+}
+
+div#reconnecting-container div.loader {
+    font-size: 6rem;
+    display: inline-block;
+    margin-top: 3rem;
+}

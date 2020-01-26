@@ -1,0 +1,29 @@
+table#restaurants tbody tr {
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+table#restaurants tbody tr:hover {
+    background: rgba(50, 150, 255, 0.2);
+}
+
+table#restaurants tbody tr.selected {
+    background: rgba(50, 150, 255, 0.4);
+}
+
+table#restaurants tbody tr.selected:hover {
+    background: rgba(50, 150, 255, 0.6);
+}
+
+table#restaurants div.tags tag-bar {
+    display: inline-block;
+    background-color: #555;
+    color: #ddd;
+    font-size: 75%;
+    padding: 0.2rem 0.4rem;
+    border: 0.075rem #777 solid;
+    margin-right: 0.2rem;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius: 0.25rem;
+}
